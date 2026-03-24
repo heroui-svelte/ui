@@ -1,1 +1,152 @@
-packages/react/README.md
+# HeroUI Svelte
+
+HeroUI Svelte is a Svelte 5 and Tailwind CSS v4 port of HeroUI v3.
+
+This repository is a pnpm monorepo containing the component library, shared styles, and the docs site used to develop and validate the port.
+
+This project is an independent community port and is not officially affiliated with, endorsed by, or maintained by the HeroUI team or HeroUI Inc.
+
+## Packages
+
+- `@heroui-svelte/ui`: the Svelte component library
+- `@heroui-svelte/styles`: shared CSS, themes, tokens, and variants
+- `@heroui-svelte/docs`: the SvelteKit docs and playground app
+
+Archived React reference code is kept in:
+
+- `packages/react-legacy`
+- `packages/storybook-legacy`
+- `apps/docs-legacy-react`
+
+## Stack
+
+- Svelte 5
+- SvelteKit 2
+- Tailwind CSS v4
+- Bits UI for many accessibility primitives
+- pnpm workspaces
+- Turborepo
+- Vitest
+
+## Getting Started
+
+### Requirements
+
+- Node.js `>=20`
+- pnpm `>=10`
+
+### Install
+
+```bash
+pnpm i --hoist
+```
+
+### Run the docs app
+
+```bash
+pnpm dev
+```
+
+### Build the workspace
+
+```bash
+pnpm build
+```
+
+## Using the UI Package (Coming soon)
+
+Install the packages you need:
+
+```bash
+pnpm add @heroui-svelte/ui @heroui-svelte/styles
+```
+
+Import the shared styles in your app stylesheet:
+
+```css
+@import "tailwindcss";
+@import "@heroui-svelte/ui/styles";
+```
+
+Use components from `@heroui-svelte/ui`:
+
+```svelte
+<script lang="ts">
+  import {Button, TextField} from "@heroui-svelte/ui";
+</script>
+
+<div class="flex gap-3">
+  <Button>Save</Button>
+  <TextField placeholder="Search..." />
+</div>
+```
+
+## Common Commands
+
+```bash
+pnpm dev
+pnpm dev:docs
+pnpm build
+pnpm build:ui
+pnpm build:styles
+pnpm lint
+pnpm typecheck
+pnpm test
+pnpm test:ui
+```
+
+Focused UI package validation:
+
+```bash
+pnpm --filter @heroui-svelte/ui typecheck
+pnpm --filter @heroui-svelte/ui test
+pnpm --filter @heroui-svelte/ui build
+```
+
+## Repository Layout
+
+```text
+.
+├── apps/
+│   ├── docs/                # SvelteKit docs site
+│   └── docs-legacy-react/   # archived React docs reference
+├── packages/
+│   ├── ui/                  # Svelte component library
+│   ├── styles/              # shared CSS and variants
+│   ├── react-legacy/        # archived React source reference
+│   ├── storybook-legacy/    # archived Storybook reference
+│   ├── standard/            # shared tooling config
+│   └── vitest/              # shared test config
+└── turbo.json
+```
+
+## Commit Convention
+
+This repo uses conventional commits. Commits must use:
+
+```text
+<type>(<scope>): <message>
+```
+
+Examples:
+
+```text
+feat(ui): port date picker to svelte
+fix(toast): align stack animation with react behavior
+chore(repo): update lint-staged config
+```
+
+Valid types include:
+
+- `feat`
+- `fix`
+- `refactor`
+- `docs`
+- `build`
+- `test`
+- `ci`
+- `chore`
+
+## License
+
+MIT
