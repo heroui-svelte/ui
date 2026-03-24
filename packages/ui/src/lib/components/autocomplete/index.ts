@@ -1,0 +1,10 @@
+export {default as Autocomplete} from "./autocomplete.svelte";
+export {default as AutocompleteRoot} from "./autocomplete.svelte";
+export {default as AutocompleteClearButton} from "./clear-button.svelte";
+export {default as AutocompleteFilter} from "./filter.svelte";
+export {default as AutocompleteTrigger} from "./trigger.svelte";
+export {default as AutocompleteIndicator} from "./indicator.svelte";
+export {default as AutocompletePopover} from "./popover.svelte";
+export {default as AutocompleteValue} from "./value.svelte";
+export {autocompleteVariants} from "@heroui-svelte/styles";
+export type {AutocompleteVariants} from "@heroui-svelte/styles";

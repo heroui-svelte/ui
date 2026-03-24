@@ -45,6 +45,13 @@
   right: 0;
 
   @apply pointer-events-auto flex flex-row items-start justify-start gap-1.5 rounded-3xl bg-surface px-4 py-3 shadow-overlay;
+
+  transition:
+    translate 350ms var(--ease-smooth),
+    scale 350ms var(--ease-smooth),
+    opacity 350ms var(--ease-smooth);
+  will-change: translate, scale, opacity;
+  @apply motion-reduce:transition-none;
 }
 
 .toast--bottom,

@@ -24,12 +24,12 @@
   @apply motion-reduce:transition-none;
 
   &:focus-visible:not(:focus),
-  &[data-focus-visible="true"] {
+  &[data-focus-visible] {
     @apply status-focused;
   }
 
   &:disabled,
-  &[data-disabled="true"],
+  &[data-disabled],
   &[aria-disabled="true"] {
     @apply status-disabled;
   }
@@ -58,7 +58,7 @@
   scrollbar-width: none;
 
   &:focus-visible:not(:focus),
-  &[data-focus-visible="true"] {
+  &[data-focus-visible] {
     @apply outline-none;
   }
 

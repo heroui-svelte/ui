@@ -52,26 +52,26 @@
   /* Hover state – only on devices that support hover (avoids false triggers on touch) */
   @media (hover: hover) {
     &:hover,
-    &[data-hovered="true"] {
+    &[data-hovered] {
       @apply bg-default text-accent;
     }
   }
 
   /* Pressed state */
   &:active,
-  &[data-pressed="true"] {
+  &[data-pressed] {
     transform: scale(0.95);
   }
 
   /* Focus state */
   &:focus-visible,
-  &[data-focus-visible="true"] {
+  &[data-focus-visible] {
     @apply status-focused;
   }
 
   /* Disabled state */
   &:disabled,
-  &[data-disabled="true"] {
+  &[data-disabled] {
     @apply status-disabled;
   }
 }
@@ -151,56 +151,56 @@
 
   /* Focus state */
   &:focus-visible:not(:focus),
-  &[data-focus-visible="true"] {
+  &[data-focus-visible] {
     @apply status-focused;
   }
 
   /* Today indicator */
-  &[data-today="true"] {
+  &[data-today] {
     @apply text-accent;
   }
 
   /* Selected state */
-  &[data-selected="true"] {
+  &[data-selected] {
     @apply bg-accent text-accent-foreground;
   }
 
   /* Pressed state */
   &:active,
-  &[data-pressed="true"] {
+  &[data-pressed] {
     @apply bg-default;
     transform: scale(0.95);
 
-    &[data-selected="true"] {
+    &[data-selected] {
       @apply bg-accent-hover;
     }
   }
 
   /* Hover state – only on devices that support hover (avoids false triggers on touch) */
   @media (hover: hover) {
-    &:hover:not([data-selected="true"]),
-    &[data-hovered="true"]:not([data-selected="true"]) {
+    &:hover:not([data-selected]),
+    &[data-hovered]:not([data-selected]) {
       @apply bg-default;
     }
   }
 
   /* Outside month (previous/next month days) */
-  &[data-outside-month="true"] {
+  &[data-outside-month] {
     @apply text-muted opacity-50;
   }
 
-  &[data-selected="true"][data-outside-month="true"] {
+  &[data-selected][data-outside-month] {
     @apply bg-default;
   }
 
   /* Unavailable dates */
-  &[data-unavailable="true"] {
+  &[data-unavailable] {
     @apply status-disabled;
   }
 
   /* Disabled state */
-  &:disabled:not([data-outside-month="true"]),
-  &[data-disabled="true"]:not([data-outside-month="true"]) {
+  &:disabled:not([data-outside-month]),
+  &[data-disabled]:not([data-outside-month]) {
     @apply status-disabled;
 
     text-decoration: line-through;
@@ -212,7 +212,7 @@
   @apply absolute bottom-1 left-1/2 size-[3px] -translate-x-1/2 rounded-full bg-muted;
 
   /* Indicator color changes when cell is selected */
-  [data-selected="true"] > & {
+  [data-selected] > & {
     @apply bg-accent-foreground;
   }
 }

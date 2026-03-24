@@ -1,12 +1,12 @@
 {
-  "name": "@heroui/styles",
+  "name": "@heroui-svelte/styles",
   "version": "3.0.1",
-  "description": "HeroUI core styles and Tailwind plugin",
-  "author": "HeroUI <support@heroui.com>",
-  "homepage": "https://heroui.com",
+  "description": "heroui-svelte core styles and Tailwind plugin",
+  "author": "heroui-svelte <opensource@heroui-svelte.dev>",
+  "homepage": "https://github.com/heroui-svelte/ui",
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroui-inc/heroui.git",
+    "url": "https://github.com/heroui-svelte/ui.git",
     "directory": "packages/styles"
   },
   "license": "MIT",

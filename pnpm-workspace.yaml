@@ -1,3 +1,6 @@
 packages:
-  - "apps/**/**"
-  - "packages/**/**"
+  - "apps/docs"
+  - "packages/standard"
+  - "packages/styles"
+  - "packages/ui"
+  - "packages/vitest"

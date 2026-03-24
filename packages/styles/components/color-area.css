@@ -6,6 +6,8 @@
 .color-area {
   @apply relative w-full max-w-56 shrink-0 rounded-2xl no-highlight;
 
+  outline: none;
+
   /* Square aspect ratio */
   aspect-ratio: 1 / 1;
 
@@ -18,6 +20,11 @@
   /* Disabled state */
   &[data-disabled="true"] {
     @apply status-disabled;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
   }
 }
 
@@ -41,7 +48,10 @@
    ========================================================================== */
 
 .color-area__thumb {
-  @apply size-4 rounded-full will-change-[width,height];
+  @apply absolute top-0 left-0 block size-4 rounded-full will-change-[width,height];
+
+  z-index: 1;
+  pointer-events: none;
 
   /* Current color from React Aria */
   background-color: var(--color-area-thumb-color);

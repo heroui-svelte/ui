@@ -17,7 +17,7 @@
   /* Hover state */
   @media (hover: hover) {
     &:hover:not(:focus-within),
-    &[data-hovered="true"]:not([data-focus-within="true"]) {
+    &[data-hovered]:not([data-focus-within]) {
       @apply bg-field-hover;
       border-color: var(--color-field-border-hover);
     }
@@ -27,31 +27,31 @@
   &[data-focus-within="true"]:not(
       :has(
         [data-slot="date-picker-trigger"]:focus,
-        [data-slot="date-picker-trigger"][data-focused="true"],
+        [data-slot="date-picker-trigger"][data-focused],
         [data-slot="date-range-picker-trigger"]:focus,
-        [data-slot="date-range-picker-trigger"][data-focused="true"]
+        [data-slot="date-range-picker-trigger"][data-focused]
       )
     ),
   &:focus-within:not(
       :has(
         [data-slot="date-picker-trigger"]:focus,
-        [data-slot="date-picker-trigger"][data-focused="true"],
+        [data-slot="date-picker-trigger"][data-focused],
         [data-slot="date-range-picker-trigger"]:focus,
-        [data-slot="date-range-picker-trigger"][data-focused="true"]
+        [data-slot="date-range-picker-trigger"][data-focused]
       )
     ) {
     @apply status-focused-field;
   }
 
   /* Invalid state */
-  &[data-invalid="true"] {
+  &[data-invalid] {
     @apply status-invalid-field;
     background-color: var(--color-field-focus);
     border-color: var(--color-field-border-invalid);
   }
 
   /* Disabled state */
-  &[data-disabled="true"],
+  &[data-disabled],
   &[aria-disabled="true"] {
     @apply status-disabled;
   }
@@ -107,28 +107,28 @@
   }
 
   /* Placeholder styling */
-  &[data-placeholder="true"] {
+  &[data-placeholder] {
     @apply text-field-placeholder;
   }
 
   /* Focused segment */
   &:focus,
-  &[data-focused="true"] {
+  &[data-focused] {
     @apply bg-accent-soft text-accent-soft-foreground;
   }
 
   /* Disabled segment */
-  &[data-disabled="true"] {
+  &[data-disabled] {
     @apply opacity-50;
   }
 
   /* Invalid segment */
-  &[data-invalid="true"] {
+  &[data-invalid] {
     @apply text-danger;
 
     /* Focused segment */
     &:focus,
-    &[data-focused="true"] {
+    &[data-focused] {
       @apply bg-danger-soft text-danger-soft-foreground;
     }
   }
@@ -159,18 +159,18 @@
 
   @media (hover: hover) {
     &:hover:not(:focus-within),
-    &[data-hovered="true"]:not([data-focus-within="true"]) {
+    &[data-hovered]:not([data-focus-within]) {
       background-color: var(--date-input-group-bg-hover);
     }
   }
 
   &:focus-within,
-  &[data-focus-within="true"] {
+  &[data-focus-within] {
     background-color: var(--date-input-group-bg-focus);
   }
 
   /* Invalid state */
-  &[data-invalid="true"] {
+  &[data-invalid] {
     @apply status-invalid-field;
     border-color: var(--color-field-border-invalid);
     background-color: var(--date-input-group-bg-focus);

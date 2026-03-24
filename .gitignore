@@ -66,6 +66,7 @@ sitemap*.xml
 
 # vite
 vite.config.ts.timestamp-*
+**/.svelte-kit
 
 # storybook
 *storybook.log

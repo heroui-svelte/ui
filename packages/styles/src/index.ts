@@ -2,7 +2,7 @@
 export {tv, cn, type VariantProps} from "tailwind-variants";
 
 // Export utility classes
-export * from "./utils";
+export * from "./utils/index";
 
 // Export all component variants
-export * from "./components";
+export * from "./components/index";

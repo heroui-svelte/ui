@@ -1,0 +1,4 @@
+@import "@heroui-svelte/styles";
+
+/* Scan routes for Tailwind utility classes (dev playground) */
+@source "../../routes";

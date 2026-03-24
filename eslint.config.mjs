@@ -7,6 +7,7 @@ const config = defineConfig([
       // Build outputs
       "**/.temp",
       "**/.next",
+      "**/.svelte-kit",
       "**/.swc",
       "**/.turbo",
       "**/.cache",

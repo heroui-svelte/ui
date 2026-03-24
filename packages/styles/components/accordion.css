@@ -31,6 +31,11 @@
   &[data-expanded="true"] {
     @apply -rotate-180;
   }
+
+  .accordion__item[data-state="open"] &,
+  .accordion__trigger[aria-expanded="true"] & {
+    @apply -rotate-180;
+  }
 }
 
 /* Accordion Item - Separator styles */

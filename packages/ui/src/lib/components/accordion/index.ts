@@ -1,0 +1,10 @@
+export {default as Accordion} from "./accordion.svelte";
+export {default as AccordionRoot} from "./accordion.svelte";
+export {default as AccordionItem} from "./item.svelte";
+export {default as AccordionHeading} from "./heading.svelte";
+export {default as AccordionTrigger} from "./trigger.svelte";
+export {default as AccordionPanel} from "./panel.svelte";
+export {default as AccordionIndicator} from "./indicator.svelte";
+export {default as AccordionBody} from "./body.svelte";
+export {accordionVariants} from "@heroui-svelte/styles";
+export type {AccordionVariants} from "@heroui-svelte/styles";

@@ -1,0 +1,10 @@
+export {default as Tabs} from "./tabs.svelte";
+export {default as TabsRoot} from "./tabs.svelte";
+export {default as TabListContainer} from "./tab-list-container.svelte";
+export {default as TabList} from "./tab-list.svelte";
+export {default as Tab} from "./tab.svelte";
+export {default as TabIndicator} from "./tab-indicator.svelte";
+export {default as TabSeparator} from "./tab-separator.svelte";
+export {default as TabPanel} from "./tab-panel.svelte";
+export {tabsVariants} from "@heroui-svelte/styles";
+export type {TabsVariants} from "@heroui-svelte/styles";
